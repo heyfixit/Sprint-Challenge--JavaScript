@@ -41,6 +41,7 @@ scope does not have access to an inner scope/function's variables.
 4. Describe the four rules of the 'this' keyword.
 
 - `this` can be implicitly defined where it is implied that `this` refers to what's left of a dot.
+
 ```javascript
 const thing = {
   name: 'thingName',
@@ -52,11 +53,11 @@ const thing = {
 console.log(thing.sayName()); // implied this in sayName() is left of dot.
 ```
 
-- `this` is deemed to be `explicitly defined` when using the methods `.call()`,`.apply()`, and `.bind()`. These methods
-    take a `thisArg` as their first parameter which will be used to define `this` in that function.
+- `this` is deemed to be `explicitly defined` when using the methods `.call()`,`.apply()`, and `.bind()`.  These methods take a `thisArg` as their first parameter which will be used to define `this` in that function.
+
 ```javascript
 const thing2 = {
-  name: 'thing2Name`
+  name: 'thing2Name'
 };
 
 // calling thing.sayName from above with thing2 as its `this`
