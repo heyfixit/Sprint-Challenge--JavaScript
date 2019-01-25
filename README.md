@@ -64,7 +64,7 @@ const thing2 = {
 console.log(thing.sayName.call(thing2)); // would produce "thing2Name"
 ```
 
-- `this` by itself refers to the root object which will be the window or console. In the case of `use strict`, it will `undefined`.
+- `this` by itself refers to the root object which will be the window or console. In the case of `use strict`, it will be `undefined`.
 
 - `this` refers to the specific instance of an object being created when used in a constructor via the `new` keyword.
 
