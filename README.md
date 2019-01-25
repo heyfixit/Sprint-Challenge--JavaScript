@@ -29,13 +29,13 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-`.forEach` returns `undefined` and `.map` returns a new array.
+- `.forEach` returns `undefined` and `.map` returns a new array.
 
 2. What is the difference between a function and a method?
-A function has exists on its own with no parent object, a method is a function that is a member of a parent object.
+- A function has exists on its own with no parent object, a method is a function that is a member of a parent object.
 
 3. What is closure?
-Closure is a feature in javascript whereby an inner function has access to an outer scope's variables, but an outer
+- Closure is a feature in javascript whereby an inner function has access to an outer scope's variables, but an outer
 scope does not have access to an inner scope/function's variables.
 
 4. Describe the four rules of the 'this' keyword.
@@ -53,7 +53,7 @@ const thing = {
 console.log(thing.sayName()); // implied this in sayName() is left of dot.
 ```
 
-- `this` is deemed to be `explicitly defined` when using the methods `.call()`,`.apply()`, and `.bind()`.  These methods take a `thisArg` as their first parameter which will be used to define `this` in that function.
+- `this` is deemed to be `explicitly defined` when using the methods `.call()`,`.apply()`, and `.bind()`. These methods take a `thisArg` as their first parameter which will be used to define `this` in that function.
 
 ```javascript
 const thing2 = {
