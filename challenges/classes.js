@@ -36,6 +36,6 @@ class CubeMaker extends CuboidMaker {
   }
 }
 
-const cube = new CuboidMaker({ length: 2, width: 3, height: 4 });
+const cube = new CubeMaker({ length: 2, width: 3, height: 4 });
 console.log(cube.volume()); // redundant test since volume is inherited
 console.log(cube.surfaceArea()); // 52
