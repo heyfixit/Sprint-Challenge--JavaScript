@@ -29,14 +29,48 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+`.forEach` returns `undefined` and `.map` returns a new array.
 
 2. What is the difference between a function and a method?
+A function has exists on its own with no parent object, a method is a function that is a member of a parent object.
 
 3. What is closure?
+Closure is a feature in javascript whereby an inner function has access to an outer scope's variables, but an outer
+scope does not have access to an inner scope/function's variables.
 
 4. Describe the four rules of the 'this' keyword.
 
+- `this` can be implicitly defined where it is implied that `this` refers to what's left of a dot.
+```javascript
+const thing = {
+  name: 'thingName',
+  sayName: function() {
+    // an implied this is used here
+    return `My name is ${this.name}`;
+  }
+};
+console.log(thing.sayName()); // implied this in sayName() is left of dot.
+```
+
+- `this` is deemed to be `explicitly defined` when using the methods `.call()`,`.apply()`, and `.bind()`. These methods
+    take a `thisArg` as their first parameter which will be used to define `this` in that function.
+```javascript
+const thing2 = {
+  name: 'thing2Name`
+};
+
+// calling thing.sayName from above with thing2 as its `this`
+console.log(thing.sayName.call(thing2)); // would produce "thing2Name"
+```
+
+- `this` by itself refers to the root object which will be the window or console. In the case of `use strict`, it will `undefined`.
+
+- `this` refers to the specific instance of an object being created when used in a constructor via the `new` keyword.
+
 5. Why do we need super() in an extended class?
+
+- `super()` invokes the parent object's constructor in the context of the child and is needed to inherit the properties
+    and methods defined inside the parent's constructor.
 
 ## Project Set up
 
@@ -65,11 +99,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
